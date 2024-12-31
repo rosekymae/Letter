@@ -1,136 +1,124 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title> 2025 </title>
+  <title>2025</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .a {
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 90px;
+      margin-top: 100px;
+      margin-left: 100px;
+      margin-right: 100px;
+      font-size: 80px;
+      font-family: serif;
+      border-style: double;
+      border-color: white;
+      border-width: thick;
+    }
+
+    .b {
+      color: white;
+      text-align: center;
+      padding-top: 170px;
+      font-size: 60px;
+    }
+
+    .pass {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sub {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      padding: 70px;
+      font-size: 50px;
+      border: none;
+      border-radius: 5px;
+      margin: 25px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      margin-top: 30px;
+      font-size: 40px;
+      border-radius: 5px;
+      border: none;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      display: block;
+      text-align: center;
+    }
+
+    #error {
+      color: red;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    .c {
+      color: white;
+      text-align: center;
+      margin-top: 300px;
+      font-size: 40px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
-<style>
-body{
-  background-color: Black;
-  
-  
-}
-
-.a{
-  color: white;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 90px;
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-right:100px;
-  font-size: 80px;
-  font-family: Serif;
-  border-style: double;
-  border-color: white;
-  border-width: thick;
-}
-
-.b{
-  color: white;
-  text-align: center;
-  padding-top: 170px;
-  font-size: 60px;
-}
-
-.pass{
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sub{
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-}
-
-input[type = "text"] {
-  padding: 70px;
-  font-size:50px;
-  border: none;
-  border-radius: 5px;
-  margin: 25;
-  margin-bottom: 10px;
-  display: block;
- 
-}
-
-input[type="submit"] { 
-  padding: 10px 20px; 
-  margin-top: 30px;
-  font-size: 40px; 
-  border-radius: 5px; 
-  border: none; 
-  background-color: white; 
-  color: black; 
-  cursor: pointer; 
-  display: block;
-  text-align: center;
-}
-
-#error{
-  color: red; 
-  font-size: 30px; 
-  margin-top: 20px;
-}
-
-.c{
-  color: white;
-  text-align: center;
-  margin-top: 300px;
-  font-size: 40px;
-  
-}
-
-.hidden { display: none; }
-
-</style>
 
 <body>
-  <h1 class = "a">
+  <h1 class="a">
     Year 2025
   </h1>
   
-  <h1 class = "b">
+  <h1 class="b">
     Enter passcode:
   </h1>
   
-  <div class = "pass">
-    <form id = "enter">
-      <div class = "sub">
-    <input type = "text" id= "passcode" name = "passcode" placeholder = "enter passcode here">
-    <input type = "submit" value = "Submit">
+  <div class="pass">
+    <form id="enter">
+      <div class="sub">
+        <input type="text" id="passcode" name="passcode" placeholder="enter passcode here">
+        <input type="submit" value="Submit">
         <div id="error" class="hidden"> Incorrect password! </div>
       </div>
     </form>
-    </div>
+  </div>
   
-  
-  <h1 class = "c">
+  <h1 class="c">
     made by roseky with ♡
   </h1>
   
-  
-  
-   <script>
+  <script>
     document.getElementById("enter").addEventListener("submit", function(event) {
       event.preventDefault();
       var passcode = document.getElementById("passcode").value;
       if (passcode === "iloveyou") {
-        document.body.style.backgroundColor = "white";
-        document.querySelector(".a").classList.add("hidden");
-        document.querySelector(".b").classList.add("hidden");
-        document.querySelector(".pass").classList.add("hidden");
-        document.querySelector(".c").classList.add("hidden");
+        window.location.href = 'interface2.html';
       } else {
-        document.getElementById("error").classList.remove("hidden")
+        document.getElementById("error").classList.remove("hidden");
       }
     });
   </script>
-  
 </body>
 </html>
