@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0; 
+    }
+
+.intro {
+   color: white;
+   text-align: center;
+   font-size: 70px;
+   font-family: serif;
+   margin-top: 100px;
+   padding: 70px;
+   padding-bottom: 20px;
+   border-bottom: dotted;
+   border-color: white;
+}
+
+.name {
+   color: white;
+   font-size: 65px;
+   padding-top: 70px;
+   padding-left: 50px;
+   margin: 30px;
+   cursor: pointer;
+}
+
+.hidden {
+   display: none;
+}
+
+input[type="text"] {
+   padding: 10px;
+   font-size: 20px;
+   border: none;
+   border-radius: 5px;
+   margin: 10px;
+   display: block;
+   width: 50%;
+   margin: 0 auto;
+}
+
+input[type="submit"] {
+   padding: 10px 20px;
+   margin-top: 20px;
+   font-size: 20px;
+   border-radius: 5px;
+   border: none;
+   background-color: white;
+   color: black;
+   cursor: pointer;
+   display: block;
+   margin: 0 auto;
+}
+
+#x {
+   color: red;
+   font-size: 20px;
+   margin-top: 10px;
+   text-align: center;
+}
+
+.letter {
+   display: block;
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+   height: 100vh; 
+   object-fit: cover; 
+}
+  
+  </style>
+</head>
+
+<body>
+  <h1 class="intro">
+    A message for you♡
+  </h1>
+
+  <h1 class="name" onclick="showPasscode('Mizpah', 'magoliman', 'Mizpah.jpg')">
+    Mizpah
+  </h1>
+  <h1 class="name" onclick="showPasscode('Ashley', 'pabilona', 'Ashley.jpg')">
+    Ashley
+  </h1>
+  <h1 class="name" onclick="showPasscode('Jubilee', 'acupan', 'Jubilee.jpg')">
+    Jubilee
+  </h1>
+  <h1 class="name" onclick="showPasscode('Jan Rio', 'benid', 'Jan Rio.jpg')">
+    Jan Rio
+  </h1>
+  <h1 class="name" onclick="showPasscode('John Rey', 'silva', 'John Rey.jpg')">
+    John Rey
+  </h1>
+  <h1 class="name" onclick="showPasscode('Jackie', 'pastias', 'Jackie.jpg')">
+    Jackie
+  </h1>
+
+  <div class="passhid hidden" id="hid">
+    <form id="sulod">
+      <input type="text" id="pass" name="pass" placeholder="enter passcode">
+      <input type="submit" value="Submit">
+      <div id="x" class="hidden">Incorrect passcode. Please try again.</div>
+    </form> 
+  </div>
+
+  <div id="letterDiv" class="hidden">
+    <img id="letterImg" class="letter" src="" alt="Letter">
+  </div>
+  
+  <script>
+    var correctPasscode = "";
+    var letterImage = "";
+    var lastClickedElement = null;
+
+    function showPasscode(name, passcode, imageUrl) {
+      if (!document.getElementById('hid').classList.contains('hidden')) {
+        document.getElementById('hid').classList.add('hidden');
+      }
+
+      correctPasscode = passcode;
+      letterImage = imageUrl;
+
+      var passcodeForm = document.getElementById('hid');
+      passcodeForm.classList.remove('hidden');
+
+      lastClickedElement = event.target;
+      lastClickedElement.insertAdjacentElement('afterend', passcodeForm);
+    }
+
+    document.getElementById("sulod").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var passcode = document.getElementById("pass").value;
+      var errorMessage = document.getElementById("x");
+      if (passcode === correctPasscode) {
+
+        document.querySelector('.intro').classList.add('hidden');
+        document.querySelectorAll('.name').forEach(function(elem) {
+          elem.classList.add('hidden');
+        });
+        document.getElementById("hid").classList.add("hidden");
+        document.getElementById("letterImg").src = letterImage;
+        document.getElementById("letterDiv").classList.remove("hidden");
+      } else {
+        errorMessage.textContent = "Incorrect passcode. Please try again.";
+        errorMessage.classList.remove("hidden");
+      }
+    });
+  
+  </script>
+
+</body>
+</html>
