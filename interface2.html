@@ -9,71 +9,70 @@
       margin: 0; 
     }
 
-.intro {
-   color: white;
-   text-align: center;
-   font-size: 70px;
-   font-family: serif;
-   margin-top: 100px;
-   padding: 70px;
-   padding-bottom: 20px;
-   border-bottom: dotted;
-   border-color: white;
-}
+    .intro {
+      color: white;
+      text-align: center;
+      font-size: 70px;
+      font-family: serif;
+      margin-top: 100px;
+      padding: 70px;
+      padding-bottom: 20px;
+      border-bottom: dotted;
+      border-color: white;
+    }
 
-.name {
-   color: white;
-   font-size: 65px;
-   padding-top: 70px;
-   padding-left: 50px;
-   margin: 30px;
-   cursor: pointer;
-}
+    .name {
+      color: white;
+      font-size: 65px;
+      padding-top: 70px;
+      padding-left: 50px;
+      margin: 30px;
+      cursor: pointer;
+    }
 
-.hidden {
-   display: none;
-}
+    .hidden {
+      display: none;
+    }
 
-input[type="text"] {
-   padding: 10px;
-   font-size: 20px;
-   border: none;
-   border-radius: 5px;
-   margin: 10px;
-   display: block;
-   width: 50%;
-   margin: 0 auto;
-}
+    input[type="text"] {
+      padding: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
 
-input[type="submit"] {
-   padding: 10px 20px;
-   margin-top: 20px;
-   font-size: 20px;
-   border-radius: 5px;
-   border: none;
-   background-color: white;
-   color: black;
-   cursor: pointer;
-   display: block;
-   margin: 0 auto;
-}
+    input[type="submit"] {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
 
-#x {
-   color: red;
-   font-size: 20px;
-   margin-top: 10px;
-   text-align: center;
-}
+    #x {
+      color: red;
+      font-size: 20px;
+      margin-top: 10px;
+      text-align: center;
+    }
 
-.letter {
-   display: block;
-   margin: 0;
-   padding: 0;
-   width: 100vw;
-   height: 100vh; 
-   object-fit: cover; 
-}
-  
+    .letter {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
   </style>
 </head>
 
@@ -82,24 +81,12 @@ input[type="submit"] {
     A message for you♡
   </h1>
 
-  <h1 class="name" onclick="showPasscode('Mizpah', 'magoliman', 'https://github.com/rosekymae/Letter/blob/gh-pages/Mizpah.jpg?raw=true')">
-    Mizpah
-  </h1>
-  <h1 class="name" onclick="showPasscode('Ashley', 'pabilona', 'https://github.com/rosekymae/Letter/blob/gh-pages/Ashley.jpg?raw=true')">
-    Ashley
-  </h1>
-  <h1 class="name" onclick="showPasscode('Jubilee', 'acupan', 'https://github.com/rosekymae/Letter/blob/gh-pages/Jubilee.jpg?raw=true')">
-    Jubilee
-  </h1>
-  <h1 class="name" onclick="showPasscode('Jan Rio', 'benid', 'https://github.com/rosekymae/Letter/blob/gh-pages/Jan%20Rio.jpg?raw=true')">
-    Jan Rio
-  </h1>
-  <h1 class="name" onclick="showPasscode('John Rey', 'silva', 'https://github.com/rosekymae/Letter/blob/gh-pages/John%20Rey.jpg?raw=true')">
-    John Rey
-  </h1>
-  <h1 class="name" onclick="showPasscode('Jackie', 'pastias', 'https://github.com/rosekymae/Letter/blob/gh-pages/Jackie.jpg?raw=true')">
-    Jackie
-  </h1>
+  <h1 class="name" onclick="showPasscode('Mizpah', 'magoliman', 'https://raw.githubusercontent.com/rosekymae/Letter/main/Mizpah.jpg')">Mizpah</h1>
+  <h1 class="name" onclick="showPasscode('Ashley', 'pabilona', 'https://raw.githubusercontent.com/rosekymae/Letter/main/Ashley.jpg')">Ashley</h1>
+  <h1 class="name" onclick="showPasscode('Jubilee', 'acupan', 'https://raw.githubusercontent.com/rosekymae/Letter/main/Jubilee.jpg')">Jubilee</h1>
+  <h1 class="name" onclick="showPasscode('Jan Rio', 'benid', 'https://raw.githubusercontent.com/rosekymae/Letter/main/Jan%20Rio.jpg')">Jan Rio</h1>
+  <h1 class="name" onclick="showPasscode('John Rey', 'silva', 'https://raw.githubusercontent.com/rosekymae/Letter/main/John%20Rey.jpg')">John Rey</h1>
+  <h1 class="name" onclick="showPasscode('Jackie', 'pastias', 'https://raw.githubusercontent.com/rosekymae/Letter/main/Jackie.jpg')">Jackie</h1>
 
   <div class="passhid hidden" id="hid">
     <form id="sulod">
@@ -151,7 +138,6 @@ input[type="submit"] {
         errorMessage.classList.remove("hidden");
       }
     });
-  
   </script>
 
 </body>
