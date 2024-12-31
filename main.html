@@ -121,7 +121,7 @@ input[type="submit"] {
       event.preventDefault();
       var passcode = document.getElementById("passcode").value;
       if (passcode === "iloveyou") {
-        document.body.style.backgroundColor = "white";
+      window.location.href = 'interface2.html';
         document.querySelector(".a").classList.add("hidden");
         document.querySelector(".b").classList.add("hidden");
         document.querySelector(".pass").classList.add("hidden");
